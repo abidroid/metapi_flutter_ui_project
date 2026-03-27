@@ -11,56 +11,66 @@ class ContainerDemoScreen extends StatelessWidget {
         title: Text('Container Demo'),
       ),
 
-      body: Center(
-        child: Container(
-          // inside the container
-          padding: EdgeInsets.only(left: 10, top: 20),
+      body: Container(
+        // inside the container
+        padding: EdgeInsets.only(left: 30, top: 20),
 
-          // outside the container
-          margin: EdgeInsets.only(left: 10, top: 10),
-          width: 300,
-          height: 300,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+        // outside the container
+        margin: EdgeInsets.only(left: 50, top: 60),
+        width: 300,
+        height: 300,
 
-            border: Border.all(color: Colors.blue, width: 5),
+        decoration: BoxDecoration(
+          //shape: BoxShape.circle,
+          //borderRadius: BorderRadius.circular(100),
 
-            // gradient: LinearGradient(
-            //   colors: [Colors.pink, Colors.purple, Colors.brown, Colors.cyan],
-            //
-            //   begin: Alignment.topLeft,
-            //   end: Alignment.bottomRight
-            // ),
-            gradient: RadialGradient(
-              center: Alignment.center,
-              colors: [Colors.orange, Colors.pink, Colors.blue],
-            ),
+          // border: Border.all(color: Colors.blue, width: 15),
 
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(-5, -5),
-                spreadRadius: 5,
-                blurRadius: 4
-              ),
-
-              BoxShadow(
-                  color: Colors.purple,
-                  offset: Offset(10, 5),
-                  spreadRadius: 5,
-                  blurRadius: 4
-              ),
-            ]
+          // gradient: LinearGradient(
+          //   colors: [Colors.pink,
+          //     Colors.purple, Colors.cyan],
+          //
+          //   begin: Alignment.topLeft,
+          //   end: Alignment.bottomRight
+          // ),
+          gradient: RadialGradient(
+            center: Alignment.topRight,
+            colors: [Colors.orange, Colors.green, Colors.red],
           ),
 
-          child: Text(
-            'Sun',
-            style: TextStyle(
-              fontSize: 30,
-              color: Colors.white,
-              backgroundColor: Colors.green,
-
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              offset: Offset(-5, -5),
+              spreadRadius: 5,
+              blurRadius: 4,
             ),
+
+            BoxShadow(
+              color: Colors.purple,
+              offset: Offset(10, 5),
+              spreadRadius: 5,
+              blurRadius: 4,
+            ),
+          ],
+        ),
+
+        // child: Text(
+        //   'Sun',
+        //   style: TextStyle(
+        //     fontSize: 30,
+        //     color: Colors.white,
+        //     backgroundColor: Colors.green,
+        //
+        //   ),
+        // ),
+        child: UnconstrainedBox(
+          child: Container(
+            width: 200,
+            height: 200,
+            color: Colors.teal,
+            alignment: Alignment.topRight,
+            child: UnconstrainedBox(child: Container(width: 100, height: 100, color: Colors.white)),
           ),
         ),
       ),
