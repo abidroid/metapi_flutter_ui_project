@@ -10,6 +10,30 @@ class ImageDemoScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
+            Icon(Icons.share, size: 50, color: Colors.orange,),
+            Icon(Icons.settings, size: 50, color: Colors.green,),
+
+            IconButton(onPressed: (){
+              showDialog(context: context, builder: (context){
+
+                return AlertDialog(
+                  title: Text('Confirmation!!!'),
+                  content: Row(
+                    children: [
+                      Text('Are you sure to logout ? '),
+                      Icon(Icons.logout),
+
+                    ],
+                  ),
+                  actions: [
+                    TextButton(onPressed: (){}, child: Text('No')),
+                    TextButton(onPressed: (){}, child: Text('Yes')),
+                  ],
+                );
+              });
+            }, icon: Icon(Icons.logout, size: 50,)),
+
             Image.asset('images/naseem.jfif', height: 200,
               alignment: Alignment.topCenter,
 
