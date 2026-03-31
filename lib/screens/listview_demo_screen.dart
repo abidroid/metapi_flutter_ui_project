@@ -82,9 +82,15 @@ class ListviewDemoScreen extends StatelessWidget {
               alignment: Alignment.topCenter,
 
             ),
-            ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset('images/icons/rendara.png', width: 100, height: 100,)),
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: ClipRRect(
+                  clipBehavior: Clip.hardEdge, // Add this explicitly
+
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/icons/rendara.png', width: 100, height: 100,)),
+            ),
 
             Image.network(
               'https://avatars.githubusercontent.com/u/17814795?v=4',
