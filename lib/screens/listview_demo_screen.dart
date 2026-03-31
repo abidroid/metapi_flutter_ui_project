@@ -1,16 +1,60 @@
+
 import 'package:flutter/material.dart';
 
-class ImageDemoScreen extends StatelessWidget {
-  const ImageDemoScreen({super.key});
+class ListviewDemoScreen extends StatelessWidget {
+  const ListviewDemoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.green, title: Text('Images Demo')),
-      body: SingleChildScrollView(
-        child: Column(
+      appBar: AppBar(backgroundColor: Colors.green,
+          title: Text('ListView Demo')),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView(
           children: [
 
+            GestureDetector(
+                onTap: (){},
+                child: Text('submit', style: TextStyle(fontSize: 30),)),
+
+            InkWell(
+              onTap: (){},
+              child: Card(
+                color: Colors.yellow,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    spacing: 16,
+                    children: [
+
+                      CircleAvatar(),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: .start,
+                          children: [
+                            Text('Flutter Group', style: TextStyle(fontSize: 20),),
+                            Text('Login into TLMS', style: TextStyle(fontSize: 16),)
+                          ],
+                        ),
+                      ),
+                      Text('5:40pm')
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            Card(
+              color: Colors.cyan,
+              child: ListTile(
+                leading: CircleAvatar(),
+                title: Text('Flutter Group 2'),
+                subtitle: Text('alsjldsjfldj'),
+                trailing: Text('5:56pm'),
+                onTap: (){},
+              ),
+            ),
             Icon(Icons.share, size: 50, color: Colors.orange,),
 
             Icon(Icons.settings, size: 50, color: Colors.green,),
@@ -70,9 +114,12 @@ class ImageDemoScreen extends StatelessWidget {
               ),
             ),
 
-            ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Image.asset('images/abid.png', width: 200, height: 200,)),
+            InkWell(
+              onTap: (){},
+              child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset('images/abid.png', width: 200, height: 200,)),
+            ),
           ],
         ),
       ),

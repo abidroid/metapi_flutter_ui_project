@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:metapi_flutter_ui_project/screens/column_demo_screen.dart';
 import 'package:metapi_flutter_ui_project/screens/container_demo_screen.dart';
 import 'package:metapi_flutter_ui_project/screens/image_demo_screen.dart';
+import 'package:metapi_flutter_ui_project/screens/listview_demo_screen.dart';
 import 'package:metapi_flutter_ui_project/screens/stack_demo_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ImageDemoScreen(),
+      home: ListviewDemoScreen(),
     );
   }
 }
