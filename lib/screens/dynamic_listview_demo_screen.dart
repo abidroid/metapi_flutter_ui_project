@@ -15,7 +15,6 @@ class DynamicListviewDemoScreen extends StatelessWidget {
       'Zia',
     ];
 
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
