@@ -4,6 +4,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../models/doctor.dart';
+import 'general_widgets.dart';
 
 class DoctorCard extends StatelessWidget {
 
@@ -14,7 +15,6 @@ class DoctorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    TextStyle txtStyle = TextStyle(fontSize: 20 ,color: Colors.white);
 
     return Card(
       color: Colors.pink,
