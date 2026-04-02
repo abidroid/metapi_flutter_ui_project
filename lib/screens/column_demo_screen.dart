@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:metapi_flutter_ui_project/models/doctor.dart';
+import 'package:metapi_flutter_ui_project/widgets/doctor_card.dart';
 
 class ColumnDemoScreen extends StatelessWidget {
   const ColumnDemoScreen({super.key});
@@ -16,6 +18,9 @@ class ColumnDemoScreen extends StatelessWidget {
             // height is that of the parent container
             mainAxisAlignment: .start,
             children: [
+              
+              DoctorCard(doctor: Doctor(name: 'Abid', spe: 'ENT', fee: 2000, clinicAddress: 'PSH', photo: 'https://avatars.githubusercontent.com/u/17814795?v=4')),
+              
               Container(color: Colors.blue, height: 100, width: double.infinity,
           
                 child: SingleChildScrollView(
